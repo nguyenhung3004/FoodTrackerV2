@@ -69,12 +69,10 @@
 			isa = PBXGroup;
 			children = (
 				0E2271461F1F6934004BF374 /* AppDelegate.swift */,
-				0E22715D1F1F69A6004BF374 /* CustomCell.swift */,
-				0E2271681F1FC530004BF374 /* MealViewController.swift */,
-				0E22715B1F1F6974004BF374 /* TableViewController.swift */,
+				0E22716B1F1FD52D004BF374 /* View */,
+				0E22716A1F1FD51F004BF374 /* Controllers */,
 				0E2271671F1FBC03004BF374 /* Model */,
 				0E22714A1F1F6934004BF374 /* Main.storyboard */,
-				0E2271611F1FB7F1004BF374 /* ImageView.swift */,
 				0E2271501F1F6934004BF374 /* Assets.xcassets */,
 				0E22715F1F1F6A43004BF374 /* default.jpg */,
 				0E2271521F1F6934004BF374 /* LaunchScreen.storyboard */,
@@ -91,6 +89,24 @@
 				0E2271651F1FBBFC004BF374 /* DataService.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		0E22716A1F1FD51F004BF374 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0E2271681F1FC530004BF374 /* MealViewController.swift */,
+				0E22715B1F1F6974004BF374 /* TableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		0E22716B1F1FD52D004BF374 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0E22715D1F1F69A6004BF374 /* CustomCell.swift */,
+				0E2271611F1FB7F1004BF374 /* ImageView.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

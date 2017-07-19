@@ -114,11 +114,15 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="M54-fo-UXi">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="M54-fo-UXi">
                                         <rect key="frame" x="0.0" y="50" width="343" height="343"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="M54-fo-UXi" secondAttribute="height" id="OcG-CM-43o"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="1Fh-85-dCc" appends="YES" id="WpB-qv-ukG"/>
+                                        </connections>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bN-N5-3O4">
                                         <rect key="frame" x="0.0" y="413" width="343" height="44"/>
@@ -154,6 +158,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="1Fh-85-dCc">
+                    <connections>
+                        <action selector="addImage:" destination="BYZ-38-t0r" id="xnk-og-GC1"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2106" y="-94"/>
         </scene>

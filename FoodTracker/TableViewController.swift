@@ -73,10 +73,6 @@ class TableViewController: UITableViewController {
             guard let selected = sender as? CustomCell else { return }
             guard let indexPath = tableView.indexPath(for: selected) else { return }
             detailVC.index = indexPath
-            let meal = DataService.shared.meals[indexPath.row]
-            
-//            detailVC.textField.text = meal.name
-//            detailVC.image.image = meal.image as? UIImage
             detailVC.segueStatus = "edit"
         }
     }
