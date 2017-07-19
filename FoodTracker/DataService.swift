@@ -29,9 +29,15 @@ class DataService {
         meals.append(meal)
     }
     
-    func deletemeal(index: IndexPath){
+    func deleteMeal(index: IndexPath){
         let meal = meals[index.row]
         meals.remove(at: index.row)
         Database.viewContext().delete(meal)
+        Database.saveContext()
+    }
+    
+    func updateMeal(name: String, image: UIImage, rating: Int, index: IndexPath){
+        deleteMeal(index: index)
+        addMeal(name: name, image: image, rating: rating)
     }
 }

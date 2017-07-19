@@ -31,7 +31,10 @@ class ImageView: UIImageView {
         didSet {
             if cornerRadius == -1{
                 self.layer.cornerRadius = self.bounds.width > self.bounds.height ? self.bounds.width * 0.5 : self.bounds.height * 0.5
+            } else {
+                self.layer.cornerRadius = cornerRadius
             }
+            self.clipsToBounds = true
         }
     }
 }

@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="4N6-0f-8uh" customClass="CustomCell" customModule="FoodTracker" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="90" id="4N6-0f-8uh" customClass="CustomCell" customModule="FoodTracker" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4N6-0f-8uh" id="vts-bW-MDR">
@@ -70,7 +70,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="uVM-Yw-3xq"/>
+                                    <outlet property="mealImage" destination="cVk-Vq-k6S" id="WRG-OK-xdP"/>
+                                    <outlet property="mealName" destination="vf9-54-dPq" id="ma6-qE-yeR"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="edit" id="uVM-Yw-3xq"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -82,7 +84,7 @@
                     <navigationItem key="navigationItem" title="Your Meals" id="uUL-cg-ATw">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Og9-Yh-SeD">
                             <connections>
-                                <segue destination="SQc-GQ-Pwp" kind="presentation" id="ba9-hb-ePm"/>
+                                <segue destination="SQc-GQ-Pwp" kind="presentation" identifier="add" id="ba9-hb-ePm"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -91,10 +93,10 @@
             </objects>
             <point key="canvasLocation" x="464.80000000000001" y="-94.002998500749626"/>
         </scene>
-        <!--View Controller-->
+        <!--New Meal-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MealViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -134,14 +136,26 @@
                             <constraint firstItem="0fZ-pE-4Rs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qY8-5Y-Mjh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="dQo-a8-dIR">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="fBk-6C-aAK"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="bkH-63-k61"/>
+                    <navigationItem key="navigationItem" title="New Meal" id="dQo-a8-dIR">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="fBk-6C-aAK">
+                            <connections>
+                                <action selector="cancelButton:" destination="BYZ-38-t0r" id="gUn-BW-6fC"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="bkH-63-k61">
+                            <connections>
+                                <action selector="saveButton:" destination="BYZ-38-t0r" id="No2-ku-61T"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="image" destination="M54-fo-UXi" id="5W7-vQ-leT"/>
+                        <outlet property="textField" destination="cvH-Da-eZj" id="O75-dX-Ynq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2114" y="-94"/>
+            <point key="canvasLocation" x="2106" y="-94"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2wG-I4-xZB">
@@ -184,6 +198,6 @@
         <image name="default" width="900" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yXp-0l-zpn"/>
+        <segue reference="uVM-Yw-3xq"/>
     </inferredMetricsTieBreakers>
 </document>

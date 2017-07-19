@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0E2271471F1F6934004BF374 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2271461F1F6934004BF374 /* AppDelegate.swift */; };
-		0E2271491F1F6934004BF374 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2271481F1F6934004BF374 /* ViewController.swift */; };
 		0E22714C1F1F6934004BF374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E22714A1F1F6934004BF374 /* Main.storyboard */; };
 		0E22714F1F1F6934004BF374 /* FoodTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E22714D1F1F6934004BF374 /* FoodTracker.xcdatamodeld */; };
 		0E2271511F1F6934004BF374 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E2271501F1F6934004BF374 /* Assets.xcassets */; };
@@ -19,12 +18,12 @@
 		0E2271621F1FB7F1004BF374 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2271611F1FB7F1004BF374 /* ImageView.swift */; };
 		0E2271641F1FBB8C004BF374 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2271631F1FBB8C004BF374 /* Database.swift */; };
 		0E2271661F1FBBFC004BF374 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2271651F1FBBFC004BF374 /* DataService.swift */; };
+		0E2271691F1FC530004BF374 /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2271681F1FC530004BF374 /* MealViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0E2271431F1F6934004BF374 /* FoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E2271461F1F6934004BF374 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0E2271481F1F6934004BF374 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0E22714B1F1F6934004BF374 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E22714E1F1F6934004BF374 /* FoodTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodTracker.xcdatamodel; sourceTree = "<group>"; };
 		0E2271501F1F6934004BF374 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,6 +35,7 @@
 		0E2271611F1FB7F1004BF374 /* ImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		0E2271631F1FBB8C004BF374 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		0E2271651F1FBBFC004BF374 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		0E2271681F1FC530004BF374 /* MealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MealViewController.swift; path = ../MealViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,8 +69,8 @@
 			isa = PBXGroup;
 			children = (
 				0E2271461F1F6934004BF374 /* AppDelegate.swift */,
-				0E2271481F1F6934004BF374 /* ViewController.swift */,
 				0E22715D1F1F69A6004BF374 /* CustomCell.swift */,
+				0E2271681F1FC530004BF374 /* MealViewController.swift */,
 				0E22715B1F1F6974004BF374 /* TableViewController.swift */,
 				0E2271671F1FBC03004BF374 /* Model */,
 				0E22714A1F1F6934004BF374 /* Main.storyboard */,
@@ -167,7 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E2271621F1FB7F1004BF374 /* ImageView.swift in Sources */,
-				0E2271491F1F6934004BF374 /* ViewController.swift in Sources */,
+				0E2271691F1FC530004BF374 /* MealViewController.swift in Sources */,
 				0E2271471F1F6934004BF374 /* AppDelegate.swift in Sources */,
 				0E22715E1F1F69A6004BF374 /* CustomCell.swift in Sources */,
 				0E22714F1F1F6934004BF374 /* FoodTracker.xcdatamodeld in Sources */,
