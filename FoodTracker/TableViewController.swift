@@ -41,7 +41,7 @@ class TableViewController: UITableViewController {
 
         cell.mealName.text = DataService.shared.meals[indexPath.row].name
         cell.mealImage.image = DataService.shared.meals[indexPath.row].image as! UIImage?
-
+        cell.ratingControl.rating = Int(DataService.shared.meals[indexPath.row].rating)
         return cell
     }
 

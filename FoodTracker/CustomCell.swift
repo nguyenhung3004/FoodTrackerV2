@@ -13,6 +13,7 @@ class CustomCell: UITableViewCell {
     @IBOutlet weak var mealName: UILabel!
     @IBOutlet weak var mealImage: ImageView!
     
+    @IBOutlet weak var ratingControl: RatingControl!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,5 +24,4 @@ class CustomCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }

@@ -14,14 +14,17 @@ class MealViewController: UIViewController {
     
     @IBOutlet weak var image: UIImageView!
     
+    @IBOutlet weak var ratingControl: RatingControl!
     var segueStatus: String?
     var index: IndexPath?
     override func viewDidLoad() {
         super.viewDidLoad()
+        textField.delegate = self
         if segueStatus == "edit"{
             title = DataService.shared.meals[(index?.row)!].name
             textField.text = DataService.shared.meals[(index?.row)!].name
             image.image = DataService.shared.meals[(index?.row)!].image as? UIImage
+            ratingControl.rating = Int(DataService.shared.meals[(index?.row)!].rating)
         }
 
     }
@@ -29,12 +32,13 @@ class MealViewController: UIViewController {
     @IBAction func saveButton(_ sender: Any) {
         let name = textField.text
         let image = self.image.image
+        let rating = ratingControl.rating
         if segueStatus == "add"{
-            DataService.shared.addMeal(name: name!, image: image!, rating: 0)
+            DataService.shared.addMeal(name: name!, image: image!, rating: rating)
             dismiss(animated: true, completion: nil)
         }
         if segueStatus == "edit"{
-            DataService.shared.updateMeal(name: name!, image: image!, rating: 0, index: index!)
+            DataService.shared.updateMeal(name: name!, image: image!, rating: rating, index: index!)
             let _ = navigationController?.popViewController(animated: true)
         }
     }
@@ -85,5 +89,17 @@ extension MealViewController: UIImagePickerControllerDelegate, UINavigationContr
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         image.image = info[UIImagePickerControllerEditedImage] as? UIImage
         dismiss(animated: true, completion: nil)
+    }
+}
+
+extension MealViewController: UITextFieldDelegate{
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        title = textField.text
     }
 }
